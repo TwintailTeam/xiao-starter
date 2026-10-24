@@ -1,0 +1,29 @@
+{
+    "name": "xiao-app",
+    "private": true,
+    "version": "0.1.0",
+    "license": "MIT-0",
+    "type": "module",
+    "scripts": {
+        "xiao": "cargo install -q --git https://github.com/TwintailTeam/xiao xiao-cli --root .xiao && \".xiao/bin/xiao\"",
+        "dev": "npm run -s xiao -- dev",
+        "dev:vite": "vite",
+        "build": "tsc && vite build",
+        "bundle": "npm run -s xiao -- bundle"
+    },
+    "dependencies": {
+        "@xiao/api": "github:TwintailTeam/xiao",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "@types/react": "^18.3.31",
+        "@types/react-dom": "^18.3.7",
+        "@vitejs/plugin-react": "^4.7.0",
+        "typescript": "^5.9.3",
+        "vite": "^5.4.21"
+    },
+    "allowScripts": {
+        "esbuild": true
+    }
+}

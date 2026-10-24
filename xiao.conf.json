@@ -1,0 +1,118 @@
+{
+    "productName": "xiao-app",
+    "mainBinaryName": "xiao-app",
+    "version": "0.1.0",
+    "identifier": "com.xiao-app.app",
+    "build": {
+        "appDir": "src-xiao",
+        "beforeDevCommand": "npm run dev:vite",
+        "devUrl": "http://localhost:1420",
+        "beforeBuildCommand": "npm run build",
+        "beforeBundleCommand": "",
+        "frontendDist": "dist",
+        "additionalWatchFolders": []
+    },
+    "app": {
+        "singleInstance": true,
+        "webEngine": {
+            "matchGpu": false
+        },
+        "deepLink": {
+            "schemes": []
+        },
+        "trayIcon": {
+            "iconPath": "",
+            "tooltip": ""
+        },
+        "windows": [
+            {
+                "title": "xiao-app",
+                "width": 800,
+                "height": 600,
+                "minWidth": 0,
+                "minHeight": 0,
+                "maxWidth": 0,
+                "maxHeight": 0,
+                "resizable": true,
+                "decorations": true,
+                "alwaysOnTop": false,
+                "center": false,
+                "fullscreen": false,
+                "maximized": false,
+                "visible": true,
+                "backgroundColor": "#101014",
+                "whenHidden": "keep"
+            }
+        ],
+        "security": {
+            "page": {
+                "readClipboard": false,
+                "writeClipboard": false,
+                "fileDialogs": false,
+                "createDirectories": false,
+                "registerDeepLinks": false
+            },
+            "opener": {
+                "schemes": [],
+                "paths": []
+            },
+            "csp": {
+                "default-src": ["'self'"],
+                "img-src": ["'self'", "data:"],
+                "font-src": ["'self'"],
+                "style-src": ["'self'", "'unsafe-inline'"],
+                "script-src": ["'self'"],
+                "connect-src": ["'self'"],
+                "media-src": ["'self'"],
+                "object-src": ["'none'"]
+            },
+            "devCsp": {
+                "default-src": ["'self'", "http://localhost:1420"],
+                "img-src": ["'self'", "data:", "http://localhost:1420"],
+                "font-src": ["'self'", "http://localhost:1420"],
+                "style-src": ["'self'", "'unsafe-inline'", "http://localhost:1420"],
+                "script-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'", "http://localhost:1420"],
+                "connect-src": ["'self'", "http://localhost:1420", "ws://localhost:1420"],
+                "media-src": ["'self'", "http://localhost:1420"],
+                "object-src": ["'none'"]
+            }
+        }
+    },
+    "bundle": {
+        "targets": ["deb", "rpm", "appimage", "windows-portable", "windows-sfx", "macos-app"],
+        "icon": ["icons/32x32.png", "icons/128x128.png", "icons/256x256.png", "icons/icon.png", "icons/icon.ico"],
+        "resources": [],
+        "webengineLocales": ["en-US"],
+        "category": "Applications",
+        "shortDescription": "A xiao app",
+        "longDescription": "",
+        "publisher": "",
+        "homepage": "",
+        "license": "",
+        "linux": {
+            "desktop": {
+                "categories": "Utility;",
+                "genericName": "",
+                "keywords": ""
+            },
+            "deb": {
+                "section": "utils",
+                "priority": "optional",
+                "depends": []
+            },
+            "rpm": {
+                "release": "1",
+                "epoch": 0,
+                "depends": []
+            }
+        },
+        "macOS": {
+            "minimumSystemVersion": "12.0",
+            "category": "public.app-category.utilities"
+        },
+        "windows": {
+            "appManifest": null,
+            "appManifestPath": null
+        }
+    }
+}
