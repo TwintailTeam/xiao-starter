@@ -5,7 +5,7 @@
     "license": "MIT-0",
     "type": "module",
     "scripts": {
-        "xiao": "cargo install -q --git https://github.com/TwintailTeam/xiao xiao-cli --root .xiao && \".xiao/bin/xiao\"",
+        "xiao": "cargo install -q --locked --git https://github.com/TwintailTeam/xiao xiao-cli --root .xiao && \".xiao/bin/xiao\"",
         "dev": "npm run -s xiao -- dev",
         "dev:vite": "vite",
         "build": "tsc && vite build",

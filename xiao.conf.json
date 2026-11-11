@@ -50,7 +50,8 @@
                 "writeClipboard": false,
                 "fileDialogs": false,
                 "createDirectories": false,
-                "registerDeepLinks": false
+                "registerDeepLinks": false,
+                "downloads": false
             },
             "opener": {
                 "schemes": [],
@@ -98,6 +99,7 @@
             "deb": {
                 "section": "utils",
                 "priority": "optional",
+                "maintainer": "",
                 "depends": []
             },
             "rpm": {
